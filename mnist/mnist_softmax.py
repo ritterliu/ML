@@ -123,26 +123,26 @@ for i in range(cnt):
   mnist.test = input_data.DataSet(test_images1, test_labels1, dtype=tf.float32)
   res=accuracy.eval({x: mnist.test.images, y_: mnist.test.labels})
 
-  print('++++++++++++++++++++++++++++++++++++++++++')
-  print(shape(mnist.test.images))
-  print('------------------------------------------')
+  # print('++++++++++++++++++++++++++++++++++++++++++')
+  # print(shape(mnist.test.images))
+  # print('------------------------------------------')
   # print (tf.argmax(y, 1))
   # print(y.eval())
   output_res = int(res[0])
   print("output:",output_res)
-
-
-  if(output_res==input_index):
-    correct = correct + 1
-    print("correct!\n")
-  else:
-    wrong = wrong + 1
-    print("wrong!\n")
-
-  print('correct:',correct, ' wrong:',wrong)
-  print(correct/(correct + wrong))
-
   print("\n")
+
+  # if(output_res==input_index):
+  #   correct = correct + 1
+  #   print("correct!\n")
+  # else:
+  #   wrong = wrong + 1
+  #   print("wrong!\n")
+
+  # print('correct:',correct, ' wrong:',wrong)
+  # print(correct/(correct + wrong))
+
+  # print("\n")
 
 
 

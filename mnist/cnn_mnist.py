@@ -3,7 +3,8 @@
 import os
 import input_data
 from mnist_demo import * 
-mnist = input_data.read_data_sets("data/", one_hot=True)
+# mnist = input_data.read_data_sets("data/", one_hot=True)
+mnist = input_data.read_data_sets2("Mnist_data/", one_hot=True)
 
 
 
@@ -160,8 +161,8 @@ for i in range(cnt):
   res=y_conv.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0})
   # res=h_pool2.eval()
   # res=accuracy.eval({x: mnist.test.images, y_: mnist.test.labels})
-  # print("output:",int(res[0]))
+  # print(i, " ---output:",int(res[0]))
   # print_matrix(res)
-  print("output:",shape(res))
-  break
+  print(i, ":------output:",shape(res))
+  # break
 
